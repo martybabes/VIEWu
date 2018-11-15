@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>VIEWu Songs</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="scripts/viewu.css">
+<link rel="stylesheet" href="config.css">
+<!--Extra Functions in jQuery-->
+<script src="scripts/jquery-1.9.1.x.js"></script>
+<script src="scripts/jquery.mobile.touch.min.js"></script>
+<script src="scripts/viewu.js"></script>
+</head>
+
+<body>
+<div id="noshow">
+  <!-- blank is always visible - .scr tap hanlers added to this as well -->
+  <div id="ctrl">
+  	<div id="player" style="visibility:hidden">
+	  <audio id="audioplayer" controls preload="auto" >
+		<source id="mp3src" src="#" type="audio/mpeg">
+	    Your browser doesn't support the &lt;audio&gt; tag.
+	 </audio>
+ 	</div>
+  </div>
+ 	<input type="hidden" name="lycount" id="lycount" value="0">
+ 	<!-- a bunch of hidden filenames -->
+ 	<input type="hidden" name="fn0" id="fn0" value="media/viewu">	<input type="hidden" name="fn10" id="fn10" value="">
+ 	<input type="hidden" name="fn1" id="fn1" value=""> 	<input type="hidden" name="fn11" id="fn11" value="">
+ 	<input type="hidden" name="fn2" id="fn2" value=""> 	<input type="hidden" name="fn12" id="fn12" value="">
+ 	<input type="hidden" name="fn3" id="fn3" value=""> 	<input type="hidden" name="fn13" id="fn13" value="">
+ 	<input type="hidden" name="fn4" id="fn4" value=""> 	<input type="hidden" name="fn14" id="fn14" value="">
+ 	<input type="hidden" name="fn5" id="fn5" value=""> 	<input type="hidden" name="fn15" id="fn15" value="">
+ 	<input type="hidden" name="fn6" id="fn6" value=""> 	<input type="hidden" name="fn16" id="fn16" value="">
+ 	<input type="hidden" name="fn7" id="fn7" value=""> 	<input type="hidden" name="fn17" id="fn17" value="">
+ 	<input type="hidden" name="fn8" id="fn8" value=""> 	<input type="hidden" name="fn18" id="fn18" value="">
+ 	<input type="hidden" name="fn9" id="fn9" value=""> 	<input type="hidden" name="fn19" id="fn19" value="">
+ 	<input type="hidden" name="fn20" id="fn20" value=""> 	<input type="hidden" name="fn21" id="fn21" value="">
+	<input type="hidden" name="fn22" id="fn22" value=""> 	<input type="hidden" name="fn23" id="fn23" value="">
+	<input type="hidden" name="fn24" id="fn24" value=""> 	<input type="hidden" name="fn25" id="fn25" value="">
+	<input type="hidden" name="fn26" id="fn26" value=""> 	<input type="hidden" name="fn27" id="fn27" value="">
+	<input type="hidden" name="fn28" id="fn28" value=""> 	<input type="hidden" name="fn29" id="fn29" value="">
+	<input type="hidden" name="fn30" id="fn30" value=""> 	<input type="hidden" value="">
+
+ 	<!-- a bunch of hidden titles -->
+ 	<input type="hidden" name="tn0" id="tn0" value="">	<input type="hidden" name="tn10" id="tn10" value="">
+ 	<input type="hidden" name="tn1" id="tn1" value=""> 	<input type="hidden" name="tn11" id="tn11" value="">
+ 	<input type="hidden" name="tn2" id="tn2" value=""> 	<input type="hidden" name="tn12" id="tn12" value="">
+ 	<input type="hidden" name="tn3" id="tn3" value=""> 	<input type="hidden" name="tn13" id="tn13" value="">
+ 	<input type="hidden" name="tn4" id="tn4" value=""> 	<input type="hidden" name="tn14" id="tn14" value="">
+ 	<input type="hidden" name="tn5" id="tn5" value=""> 	<input type="hidden" name="tn15" id="tn15" value="">
+ 	<input type="hidden" name="tn6" id="tn6" value=""> 	<input type="hidden" name="tn16" id="tn16" value="">
+ 	<input type="hidden" name="tn7" id="tn7" value=""> 	<input type="hidden" name="tn17" id="tn17" value="">
+ 	<input type="hidden" name="tn8" id="tn8" value=""> 	<input type="hidden" name="tn18" id="tn18" value="">
+ 	<input type="hidden" name="tn9" id="tn9" value=""> 	<input type="hidden" name="tn19" id="tn19" value="">
+ 	<input type="hidden" name="tn20" id="tn20" value=""> 	<input type="hidden" name="tn21" id="tn21" value="">
+	<input type="hidden" name="tn22" id="tn22" value=""> 	<input type="hidden" name="tn23" id="tn23" value="">
+	<input type="hidden" name="tn24" id="tn24" value=""> 	<input type="hidden" name="tn25" id="tn25" value="">
+	<input type="hidden" name="tn26" id="tn26" value=""> 	<input type="hidden" name="tn27" id="tn27" value="">
+	<input type="hidden" name="tn28" id="tn28" value=""> 	<input type="hidden" name="tn29" id="tn29" value="">
+	<input type="hidden" name="tn30" id="tn30" value=""> 	<input type="hidden" value="">
+
+ 	<!-- a bunch of hidden FX-s -->
+ 	<input type="hidden" name="fx0" id="fx0" value="#">	<input type="hidden" name="fx5" id="fx5" value="#">
+ 	<input type="hidden" name="fx1" id="fx1" value="#"> <input type="hidden" name="fx6" id="fx6" value="#">
+ 	<input type="hidden" name="fx2" id="fx2" value="#">	<input type="hidden" name="fx7" id="fx7" value="#">
+ 	<input type="hidden" name="fx3" id="fx3" value="#">	<input type="hidden" name="fx8" id="fx8" value="#">
+ 	<input type="hidden" name="fx4" id="fx4" value="#">	<input type="hidden" name="fx9" id="fx9" value="#">
+
+ 	<!-- a bunch of hidden lyrics -->
+ 	<input type="hidden" name="ly0" id="ly0" 
+value="PLAY:2s0#3.0s1#8.5s2#13.5s3#17.7s4#25s5
+WELCOME TO VIEWu
+ORDER:1234567890
+© copyright Words and Music by Martin ter Wee  
+
+Do this...
+Tap mid right: view next screen
+(follows screen order)
+Tap mid left: previous screen
+Tap top centre: preview screens
+More on next screen.
+Open 'help.htm' for INSTRUCTIONS
+
+FB:.notext scripts/images/showme.jpg
+
+FB:.txtwhiteinblack images/dove2wide.gif
+Screen 3 - Gif Animation added
+[FB:.txtwhiteinblack images/dove2wide.gif]
+
+CI:bgimage midleft, txtleft txtcornsilkinblack fontYnormal fontXnormal,splash.jpg
+&lt;strong&gt;CI: builder&lt;/strong&gt; for exta effects
+Use <mark>viewcibuilder.htm</mark> to create the
+layout you want for a verse using
+the selector editor.
+(copy result above first line of verse it is
+to be used for)&lt;/small&gt;
+
+Screen 5
+<mark>help.htm</mark> for BASIC INSTRUCTIONS
+  
+<mark>morehelp.htm</mark> for Additional Features
+   
+<mark>viewcibuilder.htm</mark> CI maker
+
+KARAOKE
+  
+Use <mark>viewtimings.htm</mark> to create
+show screen times in karaoke mode.
+
+FB:.txtcornsilkinblack images/bg_pray.jpg
+Background image is always fullscreen.
+If you need a small picture, place it in a
+fullsize image with the desired background
+colour (1280x720px is good enough for 16:9)
+   
+  
+  
+
+Screen 8
+
+Screen 9
+(last screen)
+   
+Tap bottom center to get out of here.
+(auto ends when music playing)
+">
+ 	<input type="hidden" name="ly1" id="ly1" value=""> 	<input type="hidden" name="ly2" id="ly2" value="">
+ 	<input type="hidden" name="ly3" id="ly3" value=""> 	<input type="hidden" name="ly4" id="ly4" value="">
+ 	<input type="hidden" name="ly5" id="ly5" value=""> 	<input type="hidden" name="ly6" id="ly6" value="">
+	<input type="hidden" name="ly7" id="ly7" value=""> 	<input type="hidden" name="ly8" id="ly8" value="">
+ 	<input type="hidden" name="ly9" id="ly9" value=""> 	<input type="hidden" name="ly10" id="ly10" value="">
+ 	<input type="hidden" name="ly11" id="ly11" value=""> 	<input type="hidden" name="ly12" id="ly12" value="">
+ 	<input type="hidden" name="ly13" id="ly13" value=""> 	<input type="hidden" name="ly14" id="ly14" value="">
+ 	<input type="hidden" name="ly15" id="ly15" value=""> 	<input type="hidden" name="ly16" id="ly16" value="">
+ 	<input type="hidden" name="ly17" id="ly17" value=""> 	<input type="hidden" name="ly18" id="ly18" value="">
+ 	<input type="hidden" name="ly19" id="ly19" value="">  	<input type="hidden" name="ly20" id="ly20" value="">
+	<input type="hidden" name="ly21" id="ly21" value=""> 	<input type="hidden" name="ly22" id="ly22" value="">
+ 	<input type="hidden" name="ly23" id="ly23" value=""> 	<input type="hidden" name="ly24" id="ly24" value="">
+ 	<input type="hidden" name="ly25" id="ly25" value=""> 	<input type="hidden" name="ly26" id="ly26" value="">
+ 	<input type="hidden" name="ly27" id="ly27" value=""> 	<input type="hidden" name="ly28" id="ly28" value="">
+ 	<input type="hidden" name="ly29" id="ly29" value=""> 	<input type="hidden" name="ly30" id="ly30" value="">
+ 	<input type="hidden" name="lyz" id="lyz" value="">
+</div><!--noshow-->
+  
+  <div  id="home"><!-- SPLASH SCREEN --> 
+	<nav>
+		<div id="navtop"><p>&nbsp;</p></div>
+		<div id="navbot">
+			<p><input type="file" name="gosong" id="gosong" class="inputfile" data-multiple-caption="{count} files selected" />
+			<label id="lblgosong" for="gosong"><span>Choose a file</span></label>
+			</p>
+
+		<!--p>&nbsp;</p-->
+		</div>
+	</nav>
+	<article>
+		<div id="arttop"><p>&nbsp;</p></div>
+		<div id="artbot"><p>&nbsp;</p></div>
+	</article>
+  </div>
+
+  <div id="titlescr">
+	  <p>&nbsp;</p>
+	<p id="title">WELCOME TO VIEWu<p>
+	  <p>&nbsp;</p>
+		<p id="info">Info</p>
+	<p id="screenorder">Screen order:<span></span></p>
+
+	<p id="controls">
+		<span id="btnhome" class="button">Home</span>
+		<span id="btnsetlist" class="button">SetList</span>
+		<span id="btnpreview" class="button">Preview</span>
+		<span id="btnshow" class="button">View</span>
+		<span id="btnplay" class="button">Play</span>
+	</p>
+	<!--p id="info"><a href="help.htm" data-ajax="false">Setup Instructions</a><p-->
+  </div>
+
+  <!-- Lyrics VIEW screen -->
+  <div  id="view">
+	<div id="viewcontrols" class="ol_controls">  
+	  <div class="ol_top">&nbsp;</div>
+	  <div class="ol_left">&nbsp;</div>
+	  <div class="ol_middle">&nbsp;</div>
+	  <div class="ol_right">&nbsp;</div>
+ 	  <div class="ol_bot">&nbsp;</div>
+	</div>  
+  </div>
+  <!--p>Nothing shows on this page!</p-->
+  <div  id="blank">
+	<div class="ol_controls">  
+	  <div class="ol_top">&nbsp;</div>
+	  <div class="ol_left">&nbsp;</div>
+	  <div class="ol_middle">&nbsp;</div>
+	  <div class="ol_right">&nbsp;</div>
+ 	  <div class="ol_bot">&nbsp;</div>
+	</div>  
+  </div>
+  <div id="setupscr" class="setupscr">
+	<p>&nbsp;</p>
+	<p id="btnsuhome" class="button">Home</p>
+	<p id="splash">Splash screen 
+		<input type="radio" name="spl" value="1" checked>splash1
+		<input type="radio" name="spl" value="2">splash2
+		<input type="radio" name="spl" value="3">splash3
+		<input type="radio" name="spl" value="4">splash4
+		<input type="radio" name="spl" value="5">Edit
+	</p>
+	<p><input id="splashfn" type="text" name="lname" value="images/.jpg"></p>
+	<p id="titlebg">Title Screen BG 
+		<input type="radio" name="tbg" value="1" checked>Navy
+		<input type="radio" name="tbg" value="2">Grey
+		<input type="radio" name="tbg" value="3">Black
+	</p>
+	<p id="songbg">Song background 
+		<input type="radio" name="sbg" value="1"  checked>black
+		<input type="radio" name="sbg" value="2">white
+		<input type="radio" name="sbg" value="3">fabric
+		<input type="radio" name="sbg" value="4">tan
+		<input type="radio" name="sbg" value="5">dark2
+	</p>
+	<img id="imgprev" class="thumb" src="" >
+  </div>	
+  <div id="setlist">
+  	<div id="fileselect">
+		<p><span id="btnslhome" class="button">Home</span><span style="display:inline-block; width:30%">&nbsp;</span><span id="setup" class="button">Setup</span>
+		</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<!--p>&nbsp;</p-->
+		<p>Add Song:<br>
+			<input type="file" name="files" id="files" class="inputfile" data-multiple-caption="{count} files selected" />
+			<label for="files"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg>
+			<span>Choose a song</span></label>
+			<!--input id="files" type="file" name="files[]" accept="text/*" /-->
+		</p>
+		<p>Add Image:<br>
+			<input type="file" name="image" id="image" class="inputfile" data-multiple-caption="{count} files selected" />
+			<label for="image"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg>
+			<span>Choose an image</span></label><br>
+			<!--input id="program" type="file" name="progs[]" accept="text/*" /-->
+			<span id="delete" class="button">Remove</span>
+		</p>
+		<!--p>Program:<br>
+			<input type="file" name="program" id="program" class="inputfile" data-multiple-caption="{count} files selected" />
+			<label for="program"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg>
+			<span>Choose a file</span></label>
+			<!--input id="program" type="file" name="progs[]" accept="text/*" /-->
+		</p-->
+		<p><span id="btnclr" class="button">Clear</span><span style="display:inline-block; width:30%">&nbsp;</span><span id="btnreset" class="button">Restart</span>
+		</p>
+	</div>
+	<div id="scrolltable">
+	<table id="settable" >
+		<tr><td id="t0" class="setlist">
+			<span id="s0" >Javascript not working</span></td>
+			<td class="setbtn"><div id="r0" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t1" class="setlist"><span id="s1"></span></td>
+			<td class="setbtn"><div id="r1" class="runbtn" type="div"></div></td>
+		</tr>
+		<tr><td id="t2" class="setlist"><span id="s2" ></span></td>
+			<td class="setbtn"><div id="r2" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t3" class="setlist"><span id="s3" ></span></td>
+			<td class="setbtn"><div id="r3" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t4" class="setlist"><span id="s4" ></span></td>
+			<td class="setbtn"><div id="r4" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t5" class="setlist"><span id="s5" ></span></td>
+			<td class="setbtn"><div id="r5" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t6" class="setlist"><span id="s6" ></span></td>
+			<td class="setbtn"><div id="r6" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t7" class="setlist"><span id="s7" ></span></td>
+			<td class="setbtn"><div id="r7" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t8" class="setlist"><span id="s8" ></span></td>
+			<td class="setbtn"><div id="r8" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t9" class="setlist"><span id="s9" ></span></td>
+			<td class="setbtn"><div id="r9" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t10" class="setlist"><span id="s10" ></span></td>
+			<td class="setbtn"><div id="r10" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t11" class="setlist"><span id="s11" ></span></td>
+			<td class="setbtn"><div id="r11" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t12" class="setlist"><span id="s12" ></span></td>
+			<td class="setbtn"><div id="r12" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t13" class="setlist"><span id="s13" ></span></td>
+			<td class="setbtn"><div id="r13" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t14" class="setlist"><span id="s14" ></span></td>
+			<td class="setbtn"><div id="r14" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t15" class="setlist"><span id="s15" ></span></td>
+			<td class="setbtn"><div id="r15" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t16" class="setlist"><span id="s16" ></span></td>
+			<td class="setbtn"><div id="r16" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t17" class="setlist"><span id="s17" ></span></td>
+			<td class="setbtn"><div id="r17" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t18" class="setlist"><span id="s18" ></span></td>
+			<td class="setbtn"><div id="r18" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t19" class="setlist"><span id="s19" ></span></td>
+			<td class="setbtn"><div id="r19" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t20" class="setlist"><span id="s20" ></span></td>
+			<td class="setbtn"><div id="r20" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t21" class="setlist"><span id="s21" ></span></td>
+			<td class="setbtn"><div id="r21" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t22" class="setlist"><span id="s22" ></span></td>
+			<td class="setbtn"><div id="r22" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t23" class="setlist"><span id="s23" ></span></td>
+			<td class="setbtn"><div id="r23" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t24" class="setlist"><span id="s24" ></span></td>
+			<td class="setbtn"><div id="r24" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t25" class="setlist"><span id="s25" ></span></td>
+			<td class="setbtn"><div id="r25" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t26" class="setlist"><span id="s26" ></span></td>
+			<td class="setbtn"><div id="r26" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t27" class="setlist"><span id="s27" ></span></td>
+			<td class="setbtn"><div id="r27" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t28" class="setlist"><span id="s28" ></span></td>
+			<td class="setbtn"><div id="r28" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t29" class="setlist"><span id="s29" ></span></td>
+			<td class="setbtn"><div id="r29" class="runbtn" type="div"></div></td>
+		</tr>	
+		<tr><td id="t30" class="setlist"><span id="s30" ></span></td>
+			<td class="setbtn"><div id="r30" class="runbtn" type="div"></div></td>
+		</tr>	
+	</table>
+	</div>
+  </div>
+
+  <div id="previewtable">
+	<table id="prevtable">
+	  <tr>
+		<td id="p1" class="preview"><div id="id-sd1"></div></td>
+		<td id="p2" class="preview"><div id="id-sd2"></div></td>
+		<td id="p3" class="preview"><div id="id-sd3"></div></td>
+	  </tr>
+	  <tr>
+		<td id="p4" class="preview"><div id="id-sd4"></div></td>
+		<td id="p5" class="preview"><div id="id-sd5"></div></td>
+		<td id="p6" class="preview"><div id="id-sd6"></div></td>
+	  </tr>
+	  <tr>
+		<td id="p7" class="preview"><div id="id-sd7"></div></td>
+		<td id="p8" class="preview"><div id="id-sd8"></div></td>
+		<td id="p9" class="preview"><div id="id-sd9"></div></td>
+	  </tr>
+	</table>
+	<p id="scrctrls">
+		<span id="btnsetlist1" class="button">Set List</span>
+		<span id="btnstartscreen" class="button">Start Screen</span>
+		<span id="btnblankscreen" class="button">Blank Screen</span>
+	</p>
+	<!--div id="pE" class="previewlast">
+	  <button id="btnsetlist1" type="button">Set List</button>
+	</div>
+	<div id="pT" class="previewlast">
+	  <button id="btnstartscreen" type="button">Start Screen</button>
+	</div>
+	<div id="p0" class="previewlast">
+	  <button id="btnblankscreen" type="button">Blank Screen</button>
+	</div-->
+  </div>
+
+<script type="text/javascript">
+</script>
+</body>
+
+</html>

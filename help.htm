@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>View Setup Instructions</title>
+</head>
+
+<body>
+<p><a href="viewu.htm">VIEWu</a> | <a href="help.htm">Help</a> | <a href="morehelp.htm">More Help</a> | <a href="viewcibuilder.htm">'CI:' Builder</a></p>
+
+<h1 id="title">VIEWu Setup/Use Instructions</h1>
+<p>VIEWu is a Universal Song-Viewing program.</p>
+<p>Because it runs in a web browser, it will run on all modern computer devices from Smart Phones to Desktops.
+<p id="debug">Javascript is required for VIEWu to work - it will not hurt your computer.<p>
+VIEWu works in your Web Browser. Not all browsers support all 
+the features required by VIEWu.</p>
+<p>Found UC Browser supports all features on Android phone.<p>Firefox 
+audio tag currently only supports .ogg audio files. 
+Mobile version messes around with filenames and not useful if you want to play 
+audio with your lyrics using VIEWu.<p>Default Android 
+browser has no audio support.<p>VIEWu does not connect to the internet - all files used are stored on your device.<br>
+You MUST setup your files and folders correctly or it will not work. 
+The zip download expands to the correct configuration.
+<h2>Contents</h2>
+<ul>
+	<li><a href="#samples">Sample Songs</a></li>
+	<li><a href="#setlistscreen">Setlist Screen</a></li>
+	<li><a href="#titlescreen">Title Screen</a></li>
+	<li><a href="#versescreen">Verse Screen</a></li>
+	<li><a href="#songfileformat">Lyrics File Format</a></li>
+	<li><a href="#fileplacement">File Placement</a></li>
+	<li><a href="#addtionalfiledata">Additional File data</a><ul>
+		<li><a href="#a_Information">Information</a></li>
+		<li><a href="#a_screenorder">Screen Order</a></li>
+		<li><a href="#a_playtimings">Play Timings (Karaoke)</a></li>
+	</ul>
+	</li>
+	<li><a href="#config">Configuring VIEWu</a></li>
+	<li><a href="#revvingup">Revving up VIEWu</a></li>
+</ul>
+
+<h2><a name="samples"></a>Sample Songs</h2>
+<p>Load sample songs from the Setlist screen File Chooser.
+<ul>
+<li>Lyrics/BowDown.txt</li>
+<li>Lyrics/BusyStreet.txt</li>
+<li>Lyrics/GodSoLoved.txt</li>
+<li>Lyrics/Seconds.txt</li>
+<li>Lyrics/TwinkleTwinkle.txt</li>
+</ul>
+<h2><a name="setlistscreen"></a>SETLIST Screen</h2>
+<p>Load songs here (.txt files only)<br>
+<img alt="SETLIST Screen" src="scripts/images/setlist.jpg" width="487" height="240"></p>
+<p>Select a song from the Setlist...</p>
+<h2><a name="titlescreen"></a>TITLE Screen</h2>
+<p>Click a button to View/Play etc.<br>
+<img alt="Title Screen" src="scripts/images/title.jpg" width="487" height="270"></p>
+<h2><a name="versescreen"></a>VERSE Screen</h2>
+<p><img alt="Verse Screen" src="scripts/images/verse.jpg" width="487" height="248"></p>
+<h2><a name="songfileformat"></a>Lyrics File Format</h2>
+<p>Simplest Song Format example:
+<pre>
+TWINKLE TWINKLE
+
+Twinkle twinkle little star,
+How I wonder what you are.
+Up above the world so high,
+Like a diamond in he sky.
+Twinkle twinkle little star,
+How I wonder what you are.
+</pre>
+<p>Verses separated by empty lines.<br>
+Note: The &quot;space&quot; character is used to create a gap between lines in the current verse.<br>
+Example:<pre>
+TWINKLE TWINKLE LITTLE STAR
+
+Twinkle twinkle little star,
+How I wonder what you are.
+Up above the world so high,
+Like a diamond in he sky.
+Twinkle twinkle little star,
+How I wonder what you are.
+
+Verse 2 line1
+Verse 2 line2
+
+Verse 3 line1
+... &lt;-use spaces to create a blank line
+Verse3 Line 3
+</pre>
+<p><strong>Name files</strong> without spaces: &quot;TwikleTwinkleLittleStar.txt&quot; 
+(use Capitalisation for readability)
+<p>Use the same name for <strong>audio files:</strong> &quot;TwikleTwinkleLittleStar.mp3&quot; 
+or &nbsp;&quot;TwikleTwinkleLittleStar.ogg&quot; 
+(see File Placement)<h2>
+<a name="fileplacement"></a>File Placement</h2>
+<ul>
+	<li>Lyrics files can be placed anywhere.</li>
+	<li>Music (audio) files MUST be placed in a folder named 
+	&#39;music&#39; in the same folder as viewu.htm.</li>
+	<li>Music files MUST have the same name as the lyric 
+	files with the correct extension for the audio (mp3/ogg) </li>
+	<li>Music (audio) files must be either mp3 or ogg - this 
+	depends upon the browser you are using.</li>
+</ul>
+<h2>
+<a name="addtionalfiledata"></a>Additional File Data</h2>
+<h3>
+<a name="a_Information"></a>Information</h3>
+<p>
+Additional information, to be shown on the TITLE screen, can 
+be added to your song file. <br>
+Example:</p>
+<pre>
+TWINKLE TWINKLE
+Key F
+Written by Annony Mouse
+Copyright information
+
+Twinkle twinkle little star,
+How I wonder what you are.
+Up above the world so high,
+Like a diamond in he sky.
+Twinkle twinkle little star,
+How I wonder what you are.</pre>
+<h3><a name="a_screenorder"></a>Screen Order</h3>
+<p>
+Adding &quot;<strong>ORDER:</strong>&quot; and appropriate numbers (<strong>0..9</strong>) 
+AFTER the TITLE 
+will make the screens jump between verses and choruses according to the set 
+order when you TAP the screen. (&quot;0&quot; = blank screen) In the following example 
+screen <strong>2</strong> is the chorus.<br>
+Example:
+<pre>
+TWINKLE TWINKLE LITTLE STAR
+ORDER:1232
+Written by Annony Mouse
+
+V1. line1
+Verse 1 line2
+(To Chorus)
+
+CHORUS:
+Twinkle twinkle little star,
+How I wonder what you are.
+Up above the world so high,
+Like a diamond in he sky.
+Twinkle twinkle little star,
+How I wonder what you are.
+
+V2. line1
+Verse 2 Line2
+(To Chorus)
+</pre>
+<h3>
+<a name="a_playtimings"></a>Play Timings (Karaoke)</h3>
+<p>
+Adding &quot;<strong>PLAY:</strong>&quot; at the TOP of the file with 
+timings will allow you to use VIEWu as a Karaoke machine (requires an audio 
+file).<br>
+<a href="viewtimings.htm">VIEWu Timings</a> creates a timings 
+list you can copy and paste into you<span lang="en-au">r</span>
+<span lang="en-au">lyrics </span>text file. <br>
+<span lang="en-au">Example:</span><pre>
+PLAY:00:0,0;00:14,1;00:37,2;00:59,3;01:20,0;01:23,2;01:55,;01:59,3;02:21,2;02:52,0;
+TWINKLE TWINKLE LITTLE STAR
+ORDER:1232
+Written by Annony Mouse
+
+V1. line1
+Verse 1 line2
+(To Chorus)
+
+CHORUS:
+Twinkle twinkle little star,
+How I wonder what you are.
+Up above the world so high,
+Like a diamond in he sky.
+Twinkle twinkle little star,
+How I wonder what you are.
+
+V2. line1
+Verse 2 Line2
+(To Chorus)
+</pre>
+<h2><a name="#config"></a>Configuring VIEWu<span lang="en-au"> - config.css</span></h2>
+<p>You may need to tweek your font and screen sizes for your device. (Be sure to 
+check your browser is not zooming!). The <strong>&quot;config.css&quot;</strong> file is the place to make minor adjustments.
+<p>You can also change the default background and text colours for the lyrics screens (.scr) by changing properties in this file. Keep a backup and if you make a mistake, just put it back.<p>
+<span lang="en-au">Make sure you refresh your browser to see the changes. (Look 
+for the &#39;Refresh&#39; icon on you mobile devices).</span>
+<h2>
+<a name="revvingup"></a>Revving Up VIEWu</h2>
+<p>
+Background pictures and transitions can be simply added to your lyrics text 
+files. <a href="morehelp.htm"><strong>CLICK HERE</strong></a> to find out more.<br>
+<img alt="Rev up VIEWu" src="scripts/images/revpreview.jpg" width="487" height="253">
+
+<p>
+
+
+</body>
+
+</html>

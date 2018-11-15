@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CI Builder</title>
+<link rel="stylesheet" type="text/css" href="scripts/help.css">
+<script type="text/javascript">	
+
+function getImage(e) {
+	var file = document.getElementById("id-selbgpath").value;
+	file += document.getElementById("id-selbgfile").files[0].name;
+	selbgimage(file);
+}
+
+
+
+
+var selectors = ["bgblack","midcenter","","txtcenter","txtwhite","fontYnormal","fontXnormal","#"];
+
+function btnbuilder() { 
+  setClassText();
+  showTestScreen();
+}
+
+function showTestScreen() {
+  var fdiv = document.createElement('DIV');
+//  fdiv.id = "id-sd1";
+  fdiv.className = selectors[0] + " " + selectors[1];
+  var fp = document.createElement('P');// place all text into span element and wrap in a div
+//  fp.id = "id-ss1";
+  fp.className = selectors[2] + " " + selectors[3] + " " 
+        + selectors[4] + " " + selectors[5] + " " + selectors[6];
+  var txt = document.getElementById("id-testnotearea").value;
+  fp.innerHTML = txt.replace(/\n/g,"<br>");
+  fdiv.appendChild(fp);
+  fdiv.style.backgroundImage = "url('" + selectors[7] + "')";
+
+  var dest = document.getElementById("pa");
+  dest.innerHTML = "";
+  dest.appendChild(fdiv);
+}
+function selbgcolor(e) { 
+  selectors[0] = event.target.value;
+  if (selectors[0] === "bgtile"  || selectors[0] === "bgimage") {
+    getImage();
+  }else{  
+    selectors[7] = "#";
+  } setClassText(); showTestScreen(); }
+function seltxtpos(e) { 
+  selectors[1] = event.target.value; setClassText(); showTestScreen(); }
+function selwidth(e) { 
+  selectors[2] = event.target.value; setClassText(); showTestScreen(); }
+function seltxtlayout(e) { 
+  selectors[3] = event.target.value; setClassText(); showTestScreen(); }
+function seltxtcolor(e) { 
+  selectors[4] = event.target.value; setClassText(); showTestScreen(); }
+function seltxtsize(e) { 
+  selectors[5] = event.target.value; setClassText(); showTestScreen(); }
+function seltxtface(e) { 
+  selectors[6] = event.target.value; setClassText(); showTestScreen(); }
+function selbgimage(value) { 
+  selectors[7] = value; setClassText(); showTestScreen(); }
+
+// function selbgfile()e) { chooseFile("cibg"); });
+// $(selbgfile).change(function(e) {
+//   if (selbgfile.value === '') {
+//     selectors[7] = "#";
+//   }else{
+//     selectors[7] = selbgfile.value;
+//   }
+//   setClassText(); showTestScreen();
+// });  
+
+
+function setClassText() {
+  document.getElementById("id-classtext").value
+        = "CI:" + selectors[0] + " " + selectors[1] + ","
+        + selectors[2] + " " + selectors[3] + " " + selectors[4] + " "
+        + selectors[5] + " " + selectors[6] + "," + selectors[7];
+}
+
+
+</script>
+
+
+</head>
+<body>
+<p><a href="viewu.htm">VIEWu</a> | <a href="help.htm">Help</a> | <a href="morehelp.htm">More Help</a> | <a href="viewcibuilder.htm">'CI:' Builder</a></p>
+<h1>'CI:' Builder</h1>
+<p>This utility builds a special "CI:DivClasses,FontClasses,Image" line.<br>
+View the file "Lyrics/97AwayInAManger.txt" to see how the generated line is used.</p>
+<p>Preview Text Editor:<br>
+<textarea id="id-testnotearea" class="testtext">&lt;strong&gt;CI: builder&lt;/strong&gt;
+&lt;small&gt;(Enter text in the editor)&lt;/small&gt;
+&lt;var&gt;Create the layout you want for a
+verse using the selectors below.&lt;/var&gt;
+&lt;mark&gt;Update Preview&lt;/mark&gt; to see result.
+&lt;small&gt;(copy the result above the verse)&lt;/small&gt;
+</textarea></br>
+<div id="pa">Preview area</div><br>
+<button id="id-btnbuilder" type="button" onClick="btnbuilder()">Update preview</button><br>
+<input id="id-classtext" type="text" size="60" placeholder="Copy and paste generated text into song"><br>       
+<p><b>CI Line Generator:</b><br>
+  <span class="selecttxt">Text block position:</span>
+  <select id="id-seltxtpos" onchange="seltxtpos()">
+    <option value="midleft">midleft</option>
+    <option value="midcenter" selected>midcenter</option>
+    <option value="midright">midright</option>
+    <option value="topleft">topleft</option>
+    <option value="topcenter">topcenter</option>
+    <option value="topright">topright</option>
+    <option value="botleft">botleft</option>
+    <option value="botcenter">botcenter</option>
+    <option value="botright">botright</option>
+  </select><br>
+  <span class="selecttxt">Text block width:</span>
+  <select id="id-selwidth" onchange="selwidth()">
+    <option value="">(txt100pc)</option>
+    <option value="txt75pc">txt75pc</option>
+    <option value="txt66pc">txt66pc</option>
+    <option value="txt50pc">txt50pc</option>
+  </select><br>
+  <span class="selecttxt">Text layout:</span>
+  <select id="id-seltxtlayout" onchange="seltxtlayout()"><br>
+    <option value="txtcenter">txtcenter</option>
+    <option value="txtleft">txtleft</option>
+    <option value="txtright">txtright</option>
+  </select><br>
+  <span class="selecttxt">BG filepath:</span>
+    <input type="text" id="id-selbgpath" value="images/"><br>
+  <span class="selecttxt">BG file:</span>
+    <input type="file" id="id-selbgfile" onchange="getImage()" value="" placeholder="select file"><br>
+  <span class="selecttxt">BG style:</span>
+  <select id="id-selbgcolor" onchange="selbgcolor()">
+    <option value="bgimage">bgimage,file</option>
+    <option value="bgtile">bgtile,file</option>
+    <option value="bgblack" selected="">bgblack</option>
+    <option value="bgwhite">bgwhite</option>
+    <option value="bgcornsilk">bgcornsilk</option>
+    <option value="bgmaroon">bgmaroon</option>
+    <option value="bgtan">bgtan</option>
+    <option value="bg1">bg1</option>
+    <option value="bg2">bg2</option>
+    <option value="bg3">bg3</option>
+    <option value="bg4">bg4</option>
+    <option value="bgfabric">bgfabric</option>
+    <option value="bgpaper">bgpaper</option>
+  </select><br>
+  <span class="selecttxt">Text colour:</span>
+  <select id="id-seltxtcolor" onchange="seltxtcolor()">
+    <option value="txtwhite">txtwhite</option>
+    <option value="txtblack">txtblack</option>
+    <option value="txtcornsilk">txtcornsilk</option>
+    <option value="txtlime">txtlime</option>
+    <option value="txtwhiteinblack">txtwhiteinblack</option>
+    <option value="txtwhiteinnavy">txtwhiteinnavy</option>
+    <option value="txtcornsilkinblack">txtcornsilkinblack</option>
+    <option value="txtblackinwhite">txtblackinwhite</option>
+    <option value="txtblackincornsilk">txtblackincornsilk</option>
+    <option value="txtgreeninblack">txtgreeninblack</option>
+    <option value="txtblackingreen">txtblackingreen</option>
+    <option value="txtnavyinwhite">txtnavyinwhite</option>
+    <option value="notext">notext</option>
+  </select><br>
+    <span class="selecttxt">Font size:</span>
+  <select id="id-seltxtsize" onchange="seltxtsize()">
+    <option value="fontYnormal">fontYnormal</option>
+    <option value="fontYsmall">fontYsmall</option>
+    <!--option value="fontYsmallest">fontYsmallest</option-->
+  </select><br>
+  <span class="selecttxt">Font type:</span>
+  <select id="id-seltxtface" onchange="seltxtface()">
+    <option value="fontXnormal">fontXnormal</option>
+    <option value="fontXnarrow">fontXnarrow</option>
+    <option value="fontserif">fontserif</option>
+    <option value="fontblack">fontblack</option>
+    <option value="fontslab">fontslab</option>
+  </select>
+</p>  
+<h3>HTML Tags in lyrics</h3>
+<div id="id-tags" class="help">
+In order to create simple powerpoints, HTML tags can be inserted in your text files as demonstrated<br>
+(use CI: builder to test and add more variation).
+<table>
+<tr><th>HTML Tag</th><th>Effect</th></tr>
+<tr><td><pre>&lt;h1&gt;Heading 1&lt;/h1&gt;</pre></td><td class="pa"><h1>Heading 1</h1></td></tr>
+<tr><td><pre>&lt;h2&gt;Heading 2&lt;/h2&gt;</pre></td><td class="pa"><h2>Heading 2</h2></td></tr>
+<tr><td><pre>&lt;h3&gt;Heading 3&lt;/h3&gt;</pre></td><td class="pa"><h3>Heading 3</h3></td></tr>
+<tr><td><pre>&lt;var&gt;'Nunito' (rounded) font face&lt;/var&gt;</pre></td><td class="pa"><var>'Nunito' (rounded) font face</var></td></tr>
+<tr><td><pre>&lt;cite&gt;Serif font face&lt;/cite&gt;</pre></td><td class="pa"><cite>Serif font face</cite></td></tr>
+<tr><td><pre>&lt;strong&gt;Like Impact font&lt;/strong&gt;</pre></td><td class="pa"><strong>Like Impact font</strong></td></tr>
+<tr><td><pre>&lt;b&gt;Bold text&lt;/b&gt;</pre></td><td class="pa"><b>Bold text</b></td></tr>
+<tr><td><pre>&lt;i&gt;Italic text&lt;/i&gt;</pre></td><td class="pa"><i>Italic text</i></td></tr>
+<tr><td><pre>&lt;em&gt;Bold Italic&lt;/em&gt;</pre></td><td class="pa"><em>Bold Italic</em></td></tr>
+<tr><td><pre>&lt;small&gt;Text 10% smaller&lt;/small&gt;</pre></td><td class="pa"><small>Text 10% smaller</small></td></tr>
+<tr><td><pre>&lt;mark&gt;I am marked&lt;/mark&gt;</pre></td><td class="pa"><mark>I am marked</mark></td></tr>
+<tr><td><pre>&lt;small&gt;&lt;b&gt;Combined tags&lt;/b&gt;&lt;/small&gt;</pre></td><td class="pa"><small><b>Combined tags</b></small></td></tr>
+<!--tr><td><pre>&lt;T&gt;X&lt;/&gt;</pre></td><td class="pa"><></></td></tr-->
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

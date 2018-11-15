@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Language" content="en-au">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Revving up VIEWu</title>
+</head>
+
+<body>
+<p><a href="viewu.htm">VIEWu</a> | <a href="help.htm">Help</a> | <a href="morehelp.htm">More Help</a> | <a href="viewcibuilder.htm">'CI:' Builder</a></p>
+<h1>VIEWu Additional Features</h1>
+<h2>Background Pictures</h2>
+<h3>FB:color, picture</h3>
+<pre><span class="cmd">FB:color filepath/filename.ext</span></pre>
+<p>Add a background picture
+<ul>
+	<li><em>color</em> = Font color: css_color, #rrggbb, #rgb, .colorclass (see end)</li>
+	<li>use relativepath/filename</li>
+	<li><em>.ext</em> = Picture files: .jpg, .jpeg, .gif, .png, .bmp</li>
+</ul>
+<p><a href="https://www.w3schools.com/colors/default.asp">Learn about CSS colours</a></p>
+<h3>Examples:</h3>
+<p>Example songs included in the package (See 'Seconds.txt'). View/Play them to see the effects at work.
+<h3>Create a song displaying sheet music as background images</h3>
+
+<p><b>Lyrics/GodSoLoved(hymn).txt</b><br>
+ - contains 4 image screens without lyrics, no music file.
+
+<pre>
+GOD SO LOVED THE WORLD
+G. Handel - 4 part score
+
+FB:black images/sheets/GodSoLoved_1.jpg
+
+FB:black images/sheets/GodSoLoved_2.jpg
+
+FB:black images/sheets/GodSoLoved_3.jpg
+
+FB:black images/sheets/GodSoLoved_4.jpg</pre>
+
+<p>Verse with background picture.
+<p><b>Lyrics/Seconds.txt</b><br>
+ - contains 9 image screens with/without lyrics, has music file.
+
+<pre>PLAY:6.0s4#14.0s8#41.0s9#57.0s8#62.0s1#78.4s2#94.8s3#111.5s0#126.7s4#134.8s5#143.1s6#150.5s0#153.0s7#170.0s0#180.0s8#190.7s1#208.2s0#210.0s8#220.0s9#
+SECONDS
+ORDER:0489801230450781089
+Key D
+Words and Music by Martin ter Wee 
+© copyright
+
+FB:white images/trains/train2.jpg
+Just a second &#39;till midnight babe
+Only one train to go,
+Can't you hear the whistle blowin'
+now,
+You gotta get the Spirit's flow.
+</pre>
+<p>open and view the whole file in Notepad text editor.
+
+<div id="settings">
+<h2>'CI:' Builder (<a href="viewcibuilder.htm">Go there</a>)</h2>
+<p>This utility builds a special "CI:DivClasses,FontClasses,Image" line.<br>
+View the file "Lyrics/97AwayInAManger.txt" to see how the generated line is used.</p>
+
+<h2>.ColorClasses</h2>
+<p>These are classes declared in VIEWu that can be used for 'FB:color,...'<br>
+They provide outlined text for viewing text over a picture.
+<pre>.notext (makes text invisible)
+.txtwhiteinblack     .txtwhiteinnavy   .txtblackinwhite   .txtblackincornsilk
+.txtcornsilkinblack  .txtgreeninblack  .txtblackingreen   .txtnavyinwhite
+
+</pre>
+</body>
+
+</html>
