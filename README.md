@@ -1,9 +1,9 @@
 # VIEWu
-Universal Song Viewing App
+Universal Song Viewing App  (Desktops/Tablets/Mobiles)
 
-viewu.htm is the main program. Will wonrk in any browser. 
+viewu.htm is the main program. Will work in any browser. 
 However, Android (and probably iOS) have restrictions on using local files.
-An Android App will be made available (email me for now). 
+An Android App will be made available to overcome this (email me for now). 
 
 help.htm and morehelp.htm explai how things work 
 Songs lyrics are created in basic .txt format and stored locally in subfolders where view.htm resides
