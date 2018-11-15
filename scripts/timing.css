@@ -1,0 +1,316 @@
+html {
+    font-size: 16px;
+    line-height:1.3;
+}
+body{
+	color:white;
+	background-color:grey;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#contentpage{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: 100%;
+	background:#A97;
+	display: block;
+	font-weight:bold;
+}
+.box{
+	width:35em;
+	padding:.2em;
+	background-color:#99FF99;
+	margin:.3em;
+	float:left;
+}
+.scrbox{
+	width:32em;
+	margin:auto;
+	padding:.2em;	
+}
+.formbox{
+	width:90%;
+	margin-left: 1em;
+	padding:.2em;	
+	float:left;
+}
+.databox{
+	width:8em;
+	margin: 0;
+	padding:0;	
+	float:left;
+}
+.item {
+	float:left;
+	width:35em;
+	margin:0.5em 0.3em;
+	padding:0.2em;
+	background-color:#99FF99;
+}
+#previewcontainer {
+	position:relative;
+	height:18em;
+	overflow:hidden;
+	background-color:black;
+	text-align:center;
+	display:flex;	
+	font-weight:normal;
+}
+#times {
+	float:left;
+	margin:0.5em 0.3em;
+	padding:0.2em;
+	width:35em;
+	min-height:15em;
+	background-color:#FFFF99;
+}
+.preview {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	font-size:1.6em;
+	color:white;
+	background-color:black;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	display:none;
+}
+#p1 { /*show instructions*/
+	display:block;
+}
+.bg{
+	background-image:"#";
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	display:block;
+	width:100%;
+	height:100%;
+}
+.bl, .bc, .br { /* <div> containing picture */
+	background-image:"#";
+	background-repeat:no-repeat;
+	background-size:50% 50%;
+	-moz-background-size:50% 50%;
+	display:block;
+	width:100%;
+	height:100%;
+}
+.bl {
+	background-position: bottom left;
+}
+.bc {
+	background-position: bottom center;
+}
+.br {
+	background-position: bottom right;
+}
+.topimg {
+	margin:auto;
+	background-image:"#";
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	display:block;
+	width:75%;
+	height:75%;
+}
+.bottxt {
+	height:24%;
+	display:block;
+	width:100%;	
+}
+.div25, .leftimg, .rightimg {
+	display:inline;
+	width:25%;
+	height:100%;	
+	background-image:"#";
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%;
+}
+.tdt{
+	padding:0;
+	border:thin black solid;
+}
+.thd {
+	border:thin black solid;
+	background-color:white;
+}
+#audioplayer{
+	display:none;
+	font-size:medium;	
+}
+#edtime {
+	display:none;
+}
+
+/* P CLASSES*/
+.txtcenter {
+text-align: center;
+    margin: 0 3% 0 3%;
+}
+.txtleft {
+  text-align: left;
+  margin: 0 2% 0 4%;
+}
+.txtright {
+  text-align: right;
+  margin: 0 4% 0 2%;
+}
+.txttop {
+  margin: 2% 3% 0 3%;
+}
+.notext {
+  visibility: hidden;
+}
+.midleft {
+  align-items: center;
+  justify-content: flex-start;
+}
+.midcenter {
+  align-items: center;
+  justify-content: center;
+}
+.midright {
+  align-items: center;
+  justify-content: flex-end;
+}
+.topleft {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.topcenter {
+  align-items: flex-start;
+  justify-content: center;
+}
+.topright {
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.botleft {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.botcenter {
+  align-items: flex-end;
+  justify-content: center;
+}
+.botright {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+/* color in P */
+.txtwhite {
+  color: white;
+}
+.txtblack {
+  color: black;
+}
+.txtcornsilk {
+  color: cornsilk;
+}
+.txtlime {
+  color: lime;
+}
+/* bgcolor in DIV */
+.bgimage { /* DIV CLASS*/
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.bgtile { /* DIV CLASS*/
+  background-repeat: repeat;
+}
+.bg0 {
+  background-image: url("");
+}
+.bg1 {
+  background-image: url("bg1.jpg");
+  background-size: 100% 100%;
+}
+.bg2 {
+  background-image: url("bg2.jpg");
+  background-size: 100% 100%;
+}
+.bg3 {
+  background-image: url("bg3.jpg");
+  background-size: 100% 100%;
+}
+.bg4 {
+  background-image: url("bg4.jpg");
+  background-size: 100% 100%;
+}
+
+.bgfabric {
+  background-image: url("fabric2.jpg");
+  background-repeat: repeat;
+}
+.bgpaper {
+  background-image: url("paper1.jpg");
+  background-repeat: repeat;
+}
+.bgblack {
+  background-color: black;
+}
+.bgwhite {
+  background-color: white;
+}
+/* bgcolor in DIV */
+.bgcornsilk {
+    background-color: cornsilk;
+}
+.bgmaroon {
+    background-color: maroon;
+}
+.bgnavy {
+    background-color: navy;
+}
+.bgteal {
+    background-color: teal;
+}
+.bgtan {
+    background-color: tan;
+}
+.txt75pc {
+  width: 75%;
+}
+.txt66pc {
+  width: 66%;
+}
+.txt50pc {
+  width: 50%;
+}
+/* colorincolor in P */
+.txtwhiteinblack {
+  color: white;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+.txtwhiteinnavy {
+  color: white;
+  text-shadow: -2px -2px 0 navy, 2px -2px 0 navy, -2px 2px 0 navy, 2px 2px 0 navy; 
+}
+.txtblackinwhite {
+  color: black;
+  text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white; 
+}
+.txtblackincornsilk {
+  color: black;
+  text-shadow: -2px -2px 0 cornsilk, 2px -2px 0 cornsilk, -2px 2px 0 cornsilk, 2px 2px 0 cornsilk; 
+}
+.txtcornsilkinblack {
+  color: cornsilk;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black; 
+}
+.txtgreeninblack {
+  color: #0f0;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black; 
+}
+.txtblackingreen {
+  color: black;
+  text-shadow: -2px -2px 0 #0f0, 2px -2px 0 #0f0, -2px 2px 0 #0f0, 2px 2px 0 #0f0; 
+}
+.txtnavyinwhite {
+  color: navy;
+  text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white; 
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Font Test</title>
+	<link rel="stylesheet" href="fontface.css">
+	<style>
+	p {
+		font-family: Ubuntu;
+		font-size: 24px;
+	}
+	.slab {
+		font-family: "Roboto Slab";
+	}
+	.cond {
+		font-family: "Roboto Condensed";
+	}
+	/*b { font-weight: 500; }*/
+	</style>	
+	
+ </head>
+  <body>
+    <p>ABCDEFGHIJKLMNOPQRSTWXYZ</p>
+    <p><b>ABCDEFGHIJKLMNOPQRSTWXYZ</b></p>
+    <p><b>abcdefgh</b>ijklmn<em>opqrstwxyz</em></p>
+	<p>1234567890<p>
+    <p class="cond">ABCDEFGHIJKLMNOPQRSTWXYZ</p>
+    <p class="cond"><b>abcdefgh</b>ijklmn<em>opqrstwxyz</em></p>
+	<p class="cond">1234567890<p>
+    <p class="slab">ABCDEFGHIJKLMNOPQRSTWXYZ</p>
+    <p class="slab"><b>abcdefgh</b>ijklmn<i>opqrstwxyz</i></p>
+	<p class="slab">1234567890<p>
+
+  </body>
+</html>

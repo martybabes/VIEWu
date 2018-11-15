@@ -1,0 +1,132 @@
+/**
+ * Include Roboto Condensed font in your project
+ * 
+ * Download Roboto Condensed ttf files from Google Fonts and place it in the same directory of this CSS file
+ * You can then use this font in your project by setting
+ * font-face: "Roboto", Helvetica, Arial, sans-serif;
+ * font-face: "Roboto Condensed", "Arial Narrow", sans-serif;
+ * font-face: "Roboto Slab", Impact, sans-serif;  //(no italic ... <i>==<em>)
+ * font-face: "Roboto Black", Charcoal, sans-serif;   //(no bold ... <b>==<strong>)
+ * font-face: "Droid Serif", Georgia, Times, serif;
+ *
+ * @author Mattia Migliorini (deshack)
+ * @license MIT
+ */
+/* "Roboto Condensed" */
+/* Normal */
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: normal;
+	font-weight: 400;
+	src: url("Roboto-Condensed.ttf") format('truetype');
+}
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: italic;
+	font-weight: 400;
+	src: url("Roboto-CondensedItalic.ttf") format('truetype');
+}
+
+/* Bold */
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: normal;
+	font-weight: 700;
+	src: url("Roboto-BoldCondensed.ttf") format('truetype');
+}
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: italic;
+	font-weight: 700;
+	src: url("RobotoCondensed-BoldItalic.ttf") format('truetype');
+}
+
+/* "Roboto" */
+/* Normal */
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	src: url("Roboto-Regular.ttf") format('truetype');
+}
+@font-face {
+	font-family: "Roboto";
+	font-style: italic;
+	font-weight: 400;
+	src: url("Roboto-Italic.ttf") format('truetype');
+}
+
+/* Bold */
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	src: url("Roboto-Bold.ttf") format('truetype');
+}
+@font-face {
+	font-family: "Roboto";
+	font-style: italic;
+	font-weight: 700;
+	src: url("Roboto-BoldItalic.ttf") format('truetype');
+}
+
+/* "Roboto Slab" */
+/* Normal */
+@font-face {
+	font-family: "Roboto Slab";
+	font-style: normal;
+	font-weight: 400;
+	src: url("RobotoSlab-Regular.ttf") format('truetype');
+}
+
+/* Bold */
+@font-face {
+	font-family: "Roboto Slab";
+	font-style: normal;
+	font-weight: 700;
+	src: url("RobotoSlab-Bold.ttf") format('truetype');
+}
+
+/* "Roboto Black" */
+@font-face {
+	font-family: "Roboto Black";
+	font-style: normal;
+	font-weight: 400;
+	src: url("Roboto-Black.ttf") format('truetype');
+}
+@font-face {
+	font-family: "Roboto Black";
+	font-style: italic;
+	font-weight: 400;
+	src: url("Roboto-BlackItalic.ttf") format('truetype');
+}
+
+/* "Droid Serif" */
+/* Normal */
+@font-face {
+	font-family: "Droid Serif";
+	font-style: normal;
+	font-weight: 400;
+	src: url("DroidSerif-Regular.ttf") format('truetype');
+}
+@font-face {
+	font-family: "Droid Serif";
+	font-style: italic;
+	font-weight: 400;
+	src: url("DroidSerif-Italic.ttf") format('truetype');
+}
+
+/* Bold */
+@font-face {
+	font-family: "Droid Serif";
+	font-style: normal;
+	font-weight: 700;
+	src: url("DroidSerif-Bold.ttf") format('truetype');
+}
+@font-face {
+	font-family: "Droid Serif";
+	font-style: italic;
+	font-weight: 700;
+	src: url("DroidSerif-BoldItalic.ttf") format('truetype');
+}
+
