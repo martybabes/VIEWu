@@ -1,0 +1,451 @@
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: normal;
+	font-weight: 400;
+	src: url("fonts/Roboto-Condensed.ttf") format('truetype');
+}
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: italic;
+	font-weight: 400;
+	src: url("fonts/Roboto-CondensedItalic.ttf") format('truetype');
+}
+
+/* Bold */
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: normal;
+	font-weight: bold;
+	src: url("fonts/Roboto-BoldCondensed.ttf") format('truetype');
+}
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: italic;
+	font-weight: bold;
+	src: url("fonts/Roboto-BoldCondensedItalic.ttf") format('truetype');
+}
+
+/* "Roboto" */
+/* Normal */
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-Regular.ttf") format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-Italic.ttf") format('truetype');
+	font-style: italic;
+	font-weight: 400;
+}
+
+/* Bold */
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-Bold.ttf") format('truetype');
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-BoldItalic.ttf") format('truetype');
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* "Roboto Slab" */
+/* Normal */
+@font-face {
+	font-family: "Roboto Slab";
+	src: url("fonts/RobotoSlab-Regular.ttf") format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+/* Bold
+@font-face {
+	font-family: "Roboto Slab";
+	src: url("fonts/RobotoSlab-Bold.ttf") format('truetype');
+	font-style: normal;
+	font-weight: bold;
+} */
+
+/* "Roboto Black" */
+@font-face {
+	font-family: "Roboto Black";
+	src: url("fonts/Roboto-Black.ttf") format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Roboto Black";
+	src: url("fonts/Roboto-BlackItalic.ttf") format('truetype');
+	font-style: italic;
+	font-weight: 400;
+}
+
+/* "Droid Serif" */
+/* Normal */
+@font-face {
+	font-family: "Droid Serif";
+	src: url("fonts/DroidSerif-Regular.ttf") format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Droid Serif";
+	src: url("fonts/DroidSerif-Italic.ttf") format('truetype');
+	font-style: italic;
+	font-weight: 400;
+}
+
+/* Droid Bold */
+@font-face {
+	font-family: "Droid Serif";
+	src: url("fonts/DroidSerif-Bold.ttf") format('truetype');
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Droid Serif";
+	src: url("fonts/DroidSerif-BoldItalic.ttf") format('truetype');
+	font-style: italic;
+	font-weight: bold;
+}
+/* Rounded */
+@font-face {
+	font-family: "Nunito";
+	src: url("fonts/Nunito-Regular.ttf") format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Nunito";
+	src: url("fonts/Nunito-Bold.ttf") format('truetype');
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/MaterialIcons-Regular.ttf") format('truetype');
+}
+
+pre {
+	font-family:monospace, monospace;
+	font-size:0.8em;
+}
+.style2 {
+	color: #0000FF;
+}
+.style3 {
+	color: #008080;
+}
+.cmd {
+	background-color:lime;
+}
+
+.selecttxt {
+	width: 150px;
+	display:inline-block
+}
+.testtext{
+    width:400px;
+    height:150px;
+}
+.fontXnormal { 
+	font-family: Roboto; 
+	/* color: white; GET FROM outer element */
+}
+.fontXrounded { 
+	font-family: Nunito; 
+	/* color: white; GET FROM outer element */
+}
+.fontXnarrow { 
+	font-family: "Roboto Condensed"; 
+	/* color: white; GET FROM outer element */
+}
+.fontYnormal {
+	font-size: 22px;	
+}
+.fontYsmall {
+	font-size: 18px;	
+}
+.fontserif {
+  font-family: "Droid Serif";
+}
+.fontblack {
+  font-family: "Roboto Black";
+}
+.fontslab {
+  font-family: "Roboto Slab";
+}
+/* pa  classes */ 
+#pa {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    width:400px;
+    height:225px;
+	margin:0;
+	padding:0;
+	font-size:22px;
+}
+#pa div{
+	display:flex;
+	height:100%;
+	max-height:100%;
+	margin:0;
+	padding:0;
+}
+.midleft {
+  align-items: center;
+  justify-content: flex-start;
+}
+.midcenter {
+  align-items: center;
+  justify-content: center;
+}
+.midright {
+  align-items: center;
+  justify-content: flex-end;
+}
+.topleft {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.topcenter {
+  align-items: flex-start;
+  justify-content: center;
+}
+.topright {
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.botleft {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.botcenter {
+  align-items: flex-end;
+  justify-content: center;
+}
+.botright {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+#pa p {
+	font-family:Roboto;
+	font-size: 1.0em;
+}
+#pa h1, .pa h1, #pa h2, .pa h2, #pa h3, .pa h3 {
+  	font-family: "Droid Serif";
+  	margin:0;
+  	padding: 0.3em 0 0.2em 0;
+  	display: inline-block;
+}
+#pa h1, .pa h1 {
+  	font-size: 1.2em;
+  	font-weight: bold;
+}
+#pa h2, .pa h2 {
+  	font-size: 1.0em;
+  	font-weight: bold;
+}
+#pa h3, .pa h3 {
+  	font-size: 1.0em;
+  	font-weight: normal;
+  	font-style: oblique;
+}
+.pa	{
+	font-family:Roboto;
+}
+#pa dl, .pa dl {
+  	-webkit-margin-before: 0.5em;
+  	-webkit-margin-after: 0.5em;
+}
+#pa b, .pa b {
+  	font-size: 1.0em;
+  	font-weight: bold;
+}
+#pa i, .pa i {
+  	font-size: 1.0em;
+  	font-style: italic;
+}
+#pa cite, .pa cite {
+  	font-family: "Droid Serif";
+  	font-size: 1.0em;
+	font-style: normal;
+	display: inline-block;
+}
+#pa var, .pa var {
+  	font-family: "Nunito";
+	font-size: 1.0em;
+	line-height: 1.15em;
+	font-style: normal;
+	display: inline-block;
+}
+#pa small, .pa small {
+  	font-size: 0.8em;
+	display: inline-block;
+	padding: 0;
+}
+#pa em, .pa em {
+  	font-size: 1.0em;
+	font-style:italic;
+  	font-weight: bold;
+}
+#pa strong, .pa strong {
+  	font-family: "Roboto Slab";
+  	font-size: 1.0em;
+	font-style:normal;
+  	font-weight: bold;
+}
+#pa mark .pa mark {
+  	font-size: 1.0em;
+	color: white;
+	background-color: #08A;
+}
+
+.bg0 {
+  background-image: url("");
+}
+.bg1 {
+  background-image: url("bg1.jpg");
+  background-size: 100% 100%;
+}
+.bg2 {
+  background-image: url("bg2.jpg");
+  background-size: 100% 100%;
+}
+.bg3 {
+  background-image: url("bg3.jpg");
+  background-size: 100% 100%;
+}
+.bg4 {
+  background-image: url("bg4.jpg");
+  background-size: 100% 100%;
+}
+table {
+	 border-collapse: collapse;
+	 text-align:center;
+}
+table, td, th {
+	border:1px solid gray ;
+}
+
+/* P CLASSES*/
+.txtcenter {
+  text-align: center;
+  margin: 0 3% 0 3%;
+}
+.txtleft {
+  text-align: left;
+  margin: 0 2% 0 4%;
+}
+.txtright {
+  text-align: right;
+  margin: 0 4% 0 2%;
+}
+.txttop {
+  margin: 2% 3% 0 3%;
+}
+.notext {
+  visibility: hidden;
+}
+/* color in P */
+.txtwhite {
+  color: white;
+}
+.txtblack {
+  color: black;
+}
+.txtcornsilk {
+  color: cornsilk;
+}
+.txtlime {
+  color: lime;
+}
+/* bgcolor in DIV */
+.bgimage { /* DIV CLASS*/
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.bgtile { /* DIV CLASS*/
+  background-repeat: repeat;
+}
+.bgfabric {
+  background-image: url("fabric2.jpg");
+  background-repeat: repeat;
+}
+.bgpaper {
+  background-image: url("paper1.jpg");
+  background-repeat: repeat;
+}
+.bgblack {
+  background-color: black;
+}
+.bgwhite {
+  background-color: white;
+}
+/* bgcolor in DIV */
+.bgcornsilk {
+    background-color: cornsilk;
+}
+.bgmaroon {
+    background-color: maroon;
+}
+.bgnavy {
+    background-color: navy;
+}
+.bgteal {
+    background-color: teal;
+}
+.bgtan {
+    background-color: tan;
+}
+.txt75pc {
+  width: 75%;
+}
+.txt66pc {
+  width: 66%;
+}
+.txt50pc {
+  width: 50%;
+}
+/* colorincolor in P */
+.txtwhiteinblack {
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+.txtwhiteinnavy {
+  color: white;
+  text-shadow: -1px -1px 0 navy, 1px -1px 0 navy, -1px 1px 0 navy, 1px 1px 0 navy; 
+}
+.txtblackinwhite {
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; 
+}
+.txtblackincornsilk {
+  color: black;
+  text-shadow: -1px -1px 0 cornsilk, 1px -1px 0 cornsilk, -1px 1px 0 cornsilk, 1px 1px 0 cornsilk; 
+}
+.txtcornsilkinblack {
+  color: cornsilk;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; 
+}
+.txtgreeninblack {
+  color: #0f0;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; 
+}
+.txtblackingreen {
+  color: black;
+  text-shadow: -1px -1px 0 #0f0, 1px -1px 0 #0f0, -1px 1px 0 #0f0, 1px 1px 0 #0f0; 
+}
+.txtnavyinwhite {
+  color: navy;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; 
+}
