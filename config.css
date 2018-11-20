@@ -1,0 +1,87 @@
+﻿/* this is a comment */
+
+
+/* a crazy way to put your music elsewhere */
+#player {
+/* 	background-image: url('file:///storage/removable/sdcard1/martintw.view/media')
+*/
+  background-image: url('media/')
+}
+/* screen size */
+#blank, #home, #titlescr, #setlist, #previewtable, #view{
+	background-image:none; /* initial setting */
+	position:absolute;
+	left:0;
+	top:0;
+	width: 100vw;
+	height: 100vh;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+#blank { /* no image on this screen */
+	background-color:black;
+}
+#home{
+	background-image:url('splash.jpg');
+	background-color:navy;
+}
+.setlist span{
+	font-size:0.8em;
+}
+#fileselect p {
+	font-size:0.8em;
+	line-height:2.0em;
+}
+#fileselect .button {
+	font-size:1.5em;
+	margin: 4%;
+}
+
+#titlescr{
+	font-family: "Droid Serif", Georgia, serif;
+	text-align:center;
+	color:white;
+	background-color:navy;
+}
+#view {
+	background-color:black;
+	color:white;
+}
+#title {  /* title font */
+	color:white;
+	font-size:2.0em;
+}
+#info {  /* info font */
+	color:white;
+	font-size:0.8em;
+}
+#screenorder {
+	color:white;
+	font-size:0.4em;
+}
+#previewtable {
+	font-size:0.9em;
+}
+.preview {
+	font-size:0.4em;
+}
+#controls .button {
+	font-size:0.8em;
+}
+#scrctrls {
+	padding-left:10%;
+}
+#scrctrls .button {
+	font-size: 0.7em;
+	margin: 0 10%;
+}
+
+#debug {
+	display:block;
+	color:white;	
+	font-size:0.9em;	
+}
+.fontYnormal {
+	font-size: 2.0em;
+	line-height: 1.2em;
+}
