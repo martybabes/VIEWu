@@ -46,6 +46,7 @@ The zip download expands to the correct configuration.
 <li>Lyrics/GodSoLoved.txt</li>
 <li>Lyrics/Seconds.txt</li>
 <li>Lyrics/TwinkleTwinkle.txt</li>
+<li>Lyrics/TwinkleTwinkleLittleStar.txt</li>
 </ul>
 <h2><a name="setlistscreen"></a>SETLIST Screen</h2>
 <p>Load songs here (.txt files only)<br>
@@ -121,7 +122,8 @@ How I wonder what you are.
 Up above the world so high,
 Like a diamond in he sky.
 Twinkle twinkle little star,
-How I wonder what you are.</pre>
+How I wonder what you are.
+</pre>
 <h3><a name="a_screenorder"></a>Screen Order</h3>
 <p>
 Adding &quot;<strong>ORDER:</strong>&quot; and appropriate numbers (<strong>0..9</strong>) 
@@ -132,14 +134,15 @@ screen <strong>2</strong> is the chorus.<br>
 Example:
 <pre>
 TWINKLE TWINKLE LITTLE STAR
-ORDER:1232
+ORDER:12320
+Key F
 Written by Annony Mouse
+Copyright information
 
 V1. line1
 Verse 1 line2
 (To Chorus)
 
-CHORUS:
 Twinkle twinkle little star,
 How I wonder what you are.
 Up above the world so high,
@@ -147,8 +150,9 @@ Like a diamond in he sky.
 Twinkle twinkle little star,
 How I wonder what you are.
 
-V2. line1
-Verse 2 Line2
+Verse 2 line1
+... &lt;<small>use spaces to create a blank line</small>
+Verse 2 line2
 (To Chorus)
 </pre>
 <h3>
@@ -163,14 +167,15 @@ list you can copy and paste into you<span lang="en-au">r</span>
 <span lang="en-au">Example:</span><pre>
 PLAY:4s1#32s2#66s3#100s0#
 TWINKLE TWINKLE LITTLE STAR
-ORDER:1232
+ORDER:12320
+Key F
 Written by Annony Mouse
+Copyright information
 
 V1. line1
 Verse 1 line2
 (To Chorus)
 
-CHORUS:
 Twinkle twinkle little star,
 How I wonder what you are.
 Up above the world so high,
@@ -179,7 +184,7 @@ Twinkle twinkle little star,
 How I wonder what you are.
 
 Verse 2 line1
-... <use spaces to create a blank line
+... &lt;<small>use spaces to create a blank line</small>
 Verse 2 line2
 (To Chorus)
 </pre>
