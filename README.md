@@ -5,7 +5,7 @@ viewu.htm is the main program. Will work in any browser.
 However, Android (and probably iOS) have restrictions on using local files.
 An Android App will be made available to overcome this (email me for now). 
 
-help.htm and morehelp.htm explai how things work.
+help.htm and morehelp.htm explain how things work.
 
 Songs lyrics are created in basic .txt format and stored locally in subfolders where view.htm resides.
 
