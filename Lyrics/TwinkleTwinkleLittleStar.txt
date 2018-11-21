@@ -1,0 +1,22 @@
+PLAY:4s1#32s2#66s3#100s0#
+TWINKLE TWINKLE LITTLE STAR
+ORDER:12320
+Key F
+Written by Annony Mouse
+Copyright information
+
+V1. line1
+Verse 1 line2
+(To Chorus)
+
+Twinkle twinkle little star,
+How I wonder what you are.
+Up above the world so high,
+Like a diamond in he sky.
+Twinkle twinkle little star,
+How I wonder what you are.
+
+Verse 2 line1
+... &lt;<small>use spaces to create a blank line</small>
+Verse 2 line2
+(To Chorus)
