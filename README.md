@@ -17,4 +17,4 @@ Lyrics folders can be named anything as long as they have a capitalised first le
 
 Why? because a companion Chrome browser app exists which uses the same set of files with a dual screen output.
 
----more later
+See Wiki Page
